@@ -1,8 +1,53 @@
-{% include main/about.html %}
-{% include main/inscription.html %}
-{% include main/faq.html %}
-{% include main/challenges.html %}
-{% include main/schedule.html %}
-{% include main/comitee.html %}
-{% include main/sponsors.html %}
-{% include main/location.html %}
+<article class="post-card home-template">
+    <div class="post-card-content">
+        <section class="post-card-excerpt">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include main/about.html %}
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include main/inscription.html %}
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include main/faq.html %}
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include main/challenges.html %}
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include main/schedule.html %}
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include main/comitee.html %}
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        {% include main/sponsors.html %}
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    {% include main/location.html %}
+                </div>
+            </div>
+        </section>
+    </div>
+</article>

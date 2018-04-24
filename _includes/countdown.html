@@ -1,7 +1,17 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-7">
-            Esto es un gran countdown
+<article class="post-card home-template">
+        <a class="post-card-image-link">
+            <div class="post-card-image" style="background-image: url(img)">
+                COUNTDOWN
+            </div>
+        </a>
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}">
+                <header class="post-card-header">
+                    <h2 class="post-card-title">Countdown</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>Countdown description test</p>
+                </section>
+            </a>
         </div>
-    </div>
-</div>
+</article>
