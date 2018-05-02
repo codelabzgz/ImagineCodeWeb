@@ -45,14 +45,16 @@
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a> &copy; {{  site.time | date: '%Y' }}</section>
-                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a>,
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a> &amp;
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </section>
                 <nav class="site-footer-nav">
-                    <a href="{{ site.baseurl }}">Latest Posts</a>
                     {% if site.facebook %}<a href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
                     {% if site.twitter %}<a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                    {% if site.mail %}
+                        <a id="mail-bottom" rel="noopener"><span id="mail-bottom-container"></span></a>
+                    {% endif %}
                 </nav>
             </div>
         </footer>
@@ -111,6 +113,20 @@
     <!-- Add Google Analytics  -->
     {% include analytics.html %}
 
+    
+    <script defer src="/assets/js/fontawesome-all.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="/assets/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/sponsors.js"></script>
+    <script>
+            writeMailLink("mail-top");
+    
+            writeMail("mail-bottom-container");
+            writeMailLink("mail-bottom");
+        </script>
+
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
     {% if page.class == "post-template" %}
         {% include post-scripts.html %}
@@ -120,6 +136,7 @@
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
     <!-- ghost_foot -->
+    
 
 </body>
 </html>
