@@ -1,6 +1,17 @@
-<h1>Organización</h1>
-<div class="row">
-    <p>
-        Ponte en contacto con nosotros
-    </p>
-</div>
+<article class="post-card home-template">
+        <a class="post-card-image-link">
+            <div class="post-card-image" style="background-image: url(assets/images/advanced.jpg)">
+                <!-- Display the countdown timer in an element -->
+            </div>
+        </a>
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}">
+                <header class="post-card-header">
+                    <h2 class="post-card-title">Organización</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>Ponte en contacto con nosotros</p>
+                </section>
+            </a>
+        </div>
+    </article>
