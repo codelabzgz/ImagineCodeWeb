@@ -29,3 +29,7 @@ function writeMail(c) {
   val = $( "#" + c );
   val.attr('hre'+'f', 'mai'+'lto:'+a+'@'+b);
  }
+
+writeMailLink("mail-top");
+writeMail("mail-bottom-container");
+writeMailLink("mail-bottom");

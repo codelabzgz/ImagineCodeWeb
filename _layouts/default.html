@@ -118,14 +118,8 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="/assets/slick/slick.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
     <script src="/assets/js/sponsors.js"></script>
-    <script>
-            writeMailLink("mail-top");
-    
-            writeMail("mail-bottom-container");
-            writeMailLink("mail-bottom");
-        </script>
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
     {% if page.class == "post-template" %}
