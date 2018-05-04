@@ -49,3 +49,6 @@ jQuery(function($){
         }*/
     });
 });
+writeMailLink("mail-top");
+writeMail("mail-bottom-container");
+writeMailLink("mail-bottom");
