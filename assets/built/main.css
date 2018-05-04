@@ -35,3 +35,8 @@ p {
 #comitee .post-card-content {
     width: 100%;
 }
+
+.social-network {
+    margin-top: 5px;
+    text-align: center;
+}
