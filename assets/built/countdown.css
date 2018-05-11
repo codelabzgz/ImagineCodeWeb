@@ -19,7 +19,7 @@ div.countdown-maincontainer {
 }
 
 .countdown-main {
-    background: url(/assets/images/advanced.jpg);
+    background: url(/assets/images/sky.jpg);
     background-size: 100% 100%;
     opacity: 0.9;
 }
@@ -34,39 +34,39 @@ div.countdown-maincontainer {
 {
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  width: 80%;
-  height: 25%;
-  min-height: 100px;
-  padding: 20px;
+  margin: auto;
+  width: 100%;
 }
 
 .countdown-item {
+    color: white;
+    border: 3px solid white;
 }
 
-@media(min-width: 500px){
+
+@media(min-width: 850px){
     .countdown-container {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-gap: 10px;
-      background-color: #fff;
-      padding: 10px;
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        grid-gap: 10px;
+        padding: 10px;
     }
 }
     
-@media(max-width: 500px){
+@media(max-width: 850px){
     .countdown-container {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-gap: 10px;
-      background-color: #fff;
-      padding: 10px;
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        padding: 10px;
     }
 }
 
 .countdown-container > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      padding: 20px 0;
-      font-size: 30px;
-    }
+    text-align: center;
+    font-size: 30px;
+}
