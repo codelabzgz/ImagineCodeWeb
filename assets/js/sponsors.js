@@ -10,7 +10,7 @@ $(".regular").slick({
   centerPadding: '0px',
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 850,
       settings: {
 				autoplay: true,
         arrows: false,
@@ -44,7 +44,7 @@ $(".challenges").slick({
   centerPadding: '0px',
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 850,
       settings: {
 				autoplay: true,
         arrows: false,
