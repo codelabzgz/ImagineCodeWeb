@@ -32,6 +32,40 @@ $(".regular").slick({
   ]
 });
 
+$(".challenges").slick({
+	dots: true,
+	infinite: true,
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	autoplay: true,
+	//lazyLoad: 'ondemand',
+
+	centerMode: true,
+  centerPadding: '0px',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+				autoplay: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '10px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+				autoplay: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '10px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
 /*$('.carousel-multi').slick({
 	centerMode: true,
 	centerPadding: '60px',
