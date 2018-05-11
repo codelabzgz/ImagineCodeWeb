@@ -483,6 +483,12 @@ The first (most recent) post in the list is styled to be bigger than the others 
         flex-direction: row;
     }
 
+    /*
+    .home-template .post-feed .post-card:nth-child(n+1) {
+        flex: 1 1 100%;
+        flex-direction: row;
+    }*/
+
     .home-template .post-feed .post-card:nth-child(n+1):not(.no-image) .post-card-image-link {
         position: relative;
         flex: 1 1 auto;
