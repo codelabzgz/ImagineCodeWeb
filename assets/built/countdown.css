@@ -38,12 +38,6 @@ div.countdown-maincontainer {
   width: 100%;
 }
 
-.countdown-item {
-    color: white;
-    border: 3px solid white;
-}
-
-
 @media(min-width: 850px){
     .countdown-container {
         width: 90%;
@@ -61,8 +55,8 @@ div.countdown-maincontainer {
         margin: auto;
         display: grid;
         grid-template-columns: auto auto;
-        grid-gap: 10px;
-        padding: 10px;
+        grid-gap: 5px;
+        padding: 5px;
     }
 }
 
@@ -70,3 +64,17 @@ div.countdown-maincontainer {
     text-align: center;
     font-size: 30px;
 }
+
+.countdown-item {
+    color: white;
+    border: 3px solid white;
+}
+
+.countdown-item h3{
+    margin-top: 20px;
+}
+
+.tiempo {
+    margin-top: 15px;
+}
+
