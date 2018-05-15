@@ -12,16 +12,15 @@ div.countdown-content {
     font-size: 4rem;
 }
 
-div.countdown-maincontainer {
-    /*display: inline;
-    margin: 0 1em 0 1em;*/
-    /*display: table;*/
-}
-
 .countdown-main {
     background: url(/assets/images/sky.jpg);
     background-size: 100% 100%;
     opacity: 0.9;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
 }
 
 .flex-container {
