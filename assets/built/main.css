@@ -77,3 +77,15 @@ div.faq-item:hover{
     box-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
     transform: scale(1.05);
 }
+
+a.twitter > svg {
+    color: rgba(29, 202, 255, 1.0);
+}
+
+a.github > svg {
+    color: rgba(0, 0, 0, 1.0);
+}
+
+a.linkedin > svg {
+    color: rgba(0, 119, 181, 1.0);
+}
