@@ -22,7 +22,7 @@ p {
 }
 
 .person {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     margin: 5%;
     min-width: 150px;
     width: 5%;
@@ -39,4 +39,41 @@ p {
 .social-network {
     margin-top: 5px;
     text-align: center;
+}
+
+.flex-item {
+    flex: 1 1 auto;
+    margin: 5%;
+    min-width: 200px;
+}
+
+.flex-item-full-flow {
+    flex: 1 1 100% !important;
+}
+
+div.faq-item > h3 {
+    font-weight: bold;
+}
+
+div.faq-item > p {
+    font-size: 13px;
+}
+
+div.faq-item {
+    width: 30%;
+    margin: 1.25%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
+    /*-webkit-box-shadow: 0 19px 38px rgba(black, 0.3), 0 15px 12px rgba(black, 0.2);
+    -moz-box-shadow: 0 19px 38px rgba(black, 0.3), 0 15px 12px rgba(black, 0.2);
+    box-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);*/
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-content: center;
+}
+
+div.faq-item:hover{
+    box-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    transform: scale(1.05);
 }
