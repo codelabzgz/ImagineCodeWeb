@@ -4,75 +4,34 @@
             <header class="post-card-header">
                 <h2 class="post-card-title">Organización</h2>
             </header>
-            </a>
-            <section class="post-card-excerpt">
-                <div class="flex-container flex-center">
-                    <div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <em>Ángel Ca&ntilde;al</em>
-                            <br />
-                            <a href="http://twitter.com/lAngelP"><i class="fab fa-twitter fa-2x"></i></a>&nbsp;
-                            <a href="http://linkedin.com/in/angeldcm"><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
+        </a>
+        <section class="post-card-excerpt">
+            <div class="flex-container flex-center">
+                {% for person in page.comitee %}
+                <div class="person">
+                    <img class="photo" src="assets/images/abraham.jpg" alt=""/>
+                    <div class="social-network">
+                        <em>{{ person.name }}</em>
+                        <br />
+                        {% if person.twitter %}
+                        <a class="twitter" href="http://twitter.com/{{person.twitter}}" target="blank">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>&nbsp;
+                        {% endif %}
+                        {% if person.linkedin %}
+                        <a class="linkedin" href="http://linkedin.com/in/{{person.linkedin}}" target="blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>&nbsp;
+                        {% endif %}
+                        {% if person.github %}
+                        <a class="github" href="http://github.com/{{person.github}}" target="blank">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        {% endif %}
                     </div>
-                    <div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <em>Jorge García</em>
-                            <br />
-                            <a href="http://linkedin.com/in/jorge-garcia-pueyo-bb6466160"><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <em>Alejandro G&oacute;mez</em>
-                            <br />
-                            <a href="http://linkedin.com/in/alejandro-gomez-7633a0163"><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <em>Daniel Gonz&aacute;lez</em>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <em>Jorge Pinilla</em>
-                            <br />
-                            <a href="http://twitter.com/jorpilo"><i class="fab fa-twitter fa-2x"></i></a>&nbsp;
-                            <a href="http://linkedin.com/in/jorpilo"><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <em>Javier L&oacute;pez Pellicer</em>
-                            <br />
-                            <a href="http://twitter.com/fjlopez"><i class="fab fa-twitter fa-2x"></i></a>&nbsp;
-                            <a href="http://www.linkedin.com/in/franciscojlopezpellicer"><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <em>David Abian</em>
-                            <br />
-                            <a href="http://twitter.com/abiatus"><i class="fab fa-twitter fa-2x"></i></a>
-                        </div>
-                    </div>
-                    <!--<div class="person">
-                        <img class="photo" src="assets/images/abraham.jpg" alt=""/>
-                        <div class="social-network">
-                            <a href=""><i class="fab fa-twitter fa-2x"></i></a>&nbsp;
-                            <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
-                        </div>
-                    </div>-->
                 </div>
-            </section>
-        <!--</a>-->
+                {% endfor %}
+            </div>
+        </section>
     </div>
 </article>
