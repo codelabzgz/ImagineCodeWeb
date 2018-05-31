@@ -9,7 +9,7 @@
             <div class="flex-container flex-center">
                 {% for person in page.comitee %}
                 <div class="person">
-                    <img class="photo" src="assets/images/abraham.jpg" alt=""/>
+                    <img class="photo" src="{{ person.photo }}" alt=""/>
                     <div class="social-network">
                         <em>{{ person.name }}</em>
                         <br />

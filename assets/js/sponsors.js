@@ -1,7 +1,7 @@
 $(".regular").slick({
 	dots: true,
 	infinite: true,
-	slidesToShow: 3,
+	slidesToShow: 1,
 	slidesToScroll: 1,
 	autoplay: true,
 	//lazyLoad: 'ondemand',
