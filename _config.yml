@@ -19,7 +19,7 @@ source_url: https://github.com/jekyller/jasper2/
 
 # Social info
 navigation: True # show the navbar links
-subscribers: True # you need to connect an external service for this to work,
+#subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
 twitter: ImagineCodeZGZ # replace by your username
