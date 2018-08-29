@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-﻿---
-layout: default
-=======
 ---
 layout: page
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
 current: home
 class: 'home-template'
 navigation: True
@@ -14,21 +9,6 @@ navigation: True
 
 ### Introducción.
 
-<<<<<<< HEAD
-CodeLab con NIF G99528358, en adelante ImagineCode, recopila, trata y almacena información personal a través de la web de su propiedad https://imaginecode.org/ o https://imaginecode.org/inscripcion.
-
-Esta información será relativa a los usuarios de la web y los participantes en ImagineCode. La información se recopilará, tratara y almacenará conforme a la presente Política de Privacidad.
-
-Esta Política de Privacidad fue actualizada el 28/08/2018.
-### Responsable legal
-
-- Denominación comercial: ImagineCode
-- Denominación social: CodeLab con NIF G99528358
-- Identificador fiscal: G99528358
-- Domicilio: Calle María de Luna 3, Edificio Torres Quevedo
-- E-mail de contacto: ic@imaginecode.org
-- Leyes de aplicación en esta web
-=======
 La asociación CodeLab recopila, trata y almacena información personal a través de las web de su propiedad [https://imaginecode.org/](https://imaginecode.org/).
 
 Esta información será relativa a los usuarios de la web y los participantes en eventos organizados por la asociación CodeLab como, por ejemplo, el hackathon ImagineCode. La información se recopilará, tratara y almacenará conforme a la presente Política de Privacidad.
@@ -42,7 +22,6 @@ Esta Política de Privacidad fue actualizada el 28/08/2018.
 - Domicilio: Calle María de Luna 3, Edificio Torres Quevedo
 - E-mail de contacto: ic@imaginecode.org
 - Leyes de aplicación en esta web:
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
 
     - RGPD (Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas)
     - LOPD (Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal y Real Decreto 1720/2007, de 21 de diciembre, Reglamento de desarrollo de la LOPD)
@@ -50,31 +29,6 @@ Esta Política de Privacidad fue actualizada el 28/08/2018.
 
 ### Datos recopilados
 
-<<<<<<< HEAD
-Únicamente se recopilarán los datos estrictamente necesarios para llevar a cabo la normal actividad del servicio. Ajustándose al principio de minimización de datos (Art.5.b GDPR).
-Los datos recopilados serán en todo caso de mayores de 16 años (Art. 8.1 GDPR). ImagineCode se reserva el derecho a tomar las medidas oportunas para comprobar la veracidad de la edad (Art. 8.2 GDPR).
-En todo caso estos datos serán de carácter personal identificativos y no sensibles, podrán ser:
-
-    - (*) Correo electrónico
-    - (*) Nombre y apellidos
-    - Nombre del aquipo
-    - Alergias y enfermedades alimentacias
-    - Talla de camiseta
-    - Temáticas de interés
-    - (*) Redes Sociales (Twitter, LinkedIn, Github)
-
-### Métodos de recopilación.
-
-Los datos personales se recopilarán a través de la web de ImagineCode, https://imaginecode.org/, cuando introduzcas información en alguno de los campos destinados a tal efecto en la web. Estos campos están debidamente señalizados y no recopilarán ningún dato hasta que no aceptes expresamente la cesión y gestión conforme a esta política de privacidad.
-
-### Objetivo de la recopilación y uso de los datos.
-
-La recopilación y uso de datos se realiza con el único objetivo de la organización del hackathon ImagineCode.
-
-En el caso de que se acepte la cesión de datos a terceros, solamente los datos marcados con asterisco (*) en el apartado "Datos recopilados" serán cedidos únicamente a los patrocinadores de ImagineCode.
-
-ImagineCode se compromete a no utilizar los datos obtenidos con una finalidad distinta a esta.
-=======
 Únicamente se recopilarán los datos estrictamente necesarios para llevar a cabo la normal actividad del servicio ajustándose al principio de minimización de datos (Art.5.b GDPR).
 
 Los datos recopilados serán en todo caso de mayores de 16 años (Art. 8.1 GDPR). ImagineCode se reserva el derecho a tomar las medidas oportunas para comprobar la veracidad de la edad (Art. 8.2 GDPR).
@@ -105,17 +59,12 @@ En el caso de que se acepte de forma explícita la cesión de datos a terceros, 
 
 
 La asociación CodeLab se compromete a no utilizar los datos obtenidos con una finalidad distinta a esta.
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
 
 ### Destinatario de los datos.
 
 Los datos recopilados se incorporarán a un fichero propiedad de:
 
-<<<<<<< HEAD
-    ImagineCode
-=======
     CodeLab
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
 
 Este fichero será gestionado por:
 
@@ -138,15 +87,9 @@ Sus datos se transfieren y almacenan de forma segura ya que disponemos de:
 - Protocolos de seguridad para prevenir accesos no autorizados.
 - Control de accesos.
 
-<<<<<<< HEAD
-ImagineCode no puede garantizar la completa seguridad en las comunicaciones a través de Internet pero garantizamos tomar las medidas adecuadas para proteger sus datos.
-
-Además ImagineCode se compromete a mantener la confidencialidad de los datos y no comunicará ni permitirá el acceso a terceros no autorizados.
-=======
 CodeLab no puede garantizar la completa seguridad en las comunicaciones a través de Internet pero garantizamos tomar las medidas adecuadas para proteger sus datos.
 
 Además CodeLab se compromete a mantener la confidencialidad de los datos y no comunicará ni permitirá el acceso a terceros no autorizados.
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
 ### Tus derechos en cuanto a protección de datos
 
 La legislación le reconoce unos derechos como usuario que ha cedido sus datos personales:
@@ -168,37 +111,21 @@ La base legal para el tratamiento de tus datos personales es la aceptación expl
 
 ### Consecuencias de no aceptar la política de privacidad
 
-<<<<<<< HEAD
-En el caso de que no aceptes la gestión de tus datos según la presente política de privacidad, no se procederá a la recopilación de los mismos, lo que puede suponer que no se pueda llevar a cabo el servicio prestado por ImagineCode.
-=======
 En el caso de que no aceptes la gestión de tus datos según la presente política de privacidad, no se procederá a la recopilación de los mismos, lo que puede suponer que no se pueda llevar a cabo el servicio prestado por CodeLab.
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
 
 ### Autoridad de protección de datos en España
 
 En el caso de que quieras hacer valer tus derechos en cuanto a protección de datos y consideras que no los estamos respetando puedes dirigirte a la autoridad española responsable.
 
 – Sitio web de la autoridad de protección de datos:
-<<<<<<< HEAD
-https://www.agpd.es/
-=======
 [https://www.agpd.es/](https://www.agpd.es/)
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
 
 – E-mail de la autoridad de protección de datos:
 internacional@agpd.es
 
 – Teléfono de la autoridad de protección de datos:
-<<<<<<< HEAD
-+34 91399 6200
-
-### Cambios en la Política de Privacidad
-
-ImagineCode se reserva el derecho a modificar la presente Política de Privacidad, estas modificaciones se harán conforme a la legislación y la jurisprudencia y quedaran reflejadas en la presente Política de Privacidad.
-=======
 +34 91 399 62 00
 
 ### Cambios en la Política de Privacidad
 
 ImagineCode se reserva el derecho a modificar la presente Política de Privacidad, estas modificaciones se harán conforme a la legislación y la jurisprudencia y quedaran reflejadas en la presente Política de Privacidad.
->>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
