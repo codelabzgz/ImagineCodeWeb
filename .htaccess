@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/xml
@@ -16,3 +17,6 @@ Header set Cache-Control "max-age=86400, public"
 <filesMatch ".(css|js)$">
 Header set Cache-Control "max-age=86400, public"
 </filesMatch>
+=======
+Redirect 301 /inscripcion https://docs.google.com/forms/d/e/1FAIpQLSeKE2SOQSEeA5CbXs7ebmR0MASN_Im4_H7DUajYQ0BrarZlDg/viewform
+>>>>>>> 70d5e67ae7832388d685f156a3302e679e09689a
