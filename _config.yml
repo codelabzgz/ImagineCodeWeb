@@ -1,5 +1,5 @@
 # Jekyll configuration
-markdown: kramdown
+#markdown: kramdown
 highlighter: rouge
 paginate: 100 # it will paginate after this number
 language: 'es-es'
@@ -76,6 +76,8 @@ production_url:  https://jekyller.github.io/jasper2/
 source_url:  https://github.com/jekyller/jasper2/
 
 exclude:
+  - images
+  - src/*
   - assets/css
   - node_modules
   - vendor
@@ -92,3 +94,5 @@ exclude:
   - changelog.md
   - "*.Rmd"
   - .git*
+  - "*.sh"
+  - test/*

@@ -33,3 +33,11 @@ function writeMail(c) {
 writeMailLink("mail-top");
 writeMail("mail-bottom-container");
 writeMailLink("mail-bottom");
+
+$(document).ready(function(){
+  $.each($("img[data-defer-src]"), function(index, e){
+    var img = $(e);
+    img.attr("src", img.data("defer-src"));
+    img.data("defer-src", "");
+  });
+});

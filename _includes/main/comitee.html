@@ -10,7 +10,7 @@
                 {% for person in page.comitee %}
                 {% if person.photo%}
                 <div class="person">
-                    <img class="photo" src="{{ person.photo }}" alt=""/>
+                    <img class="photo" width="5%" data-defer-src="{{ site.baseurl }}{{ person.photo }}" alt="{{person.name}}"/>
                     <div class="social-network">
                         <em>{{ person.name }}</em>
                         <br />

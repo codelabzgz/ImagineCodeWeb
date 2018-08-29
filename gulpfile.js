@@ -15,6 +15,9 @@ var cssnano = require('cssnano');
 var customProperties = require('postcss-custom-properties');
 var easyimport = require('postcss-easy-import');
 
+// img plugins
+var imageop = require('gulp-image-optimization');
+
 var swallowError = function swallowError(error) {
     gutil.log(error.toString());
     gutil.beep();
@@ -25,7 +28,7 @@ var nodemonServerInit = function () {
     livereload.listen(1234);
 };
 
-gulp.task('build', ['css'], function (/* cb */) {
+gulp.task('build', ['css', 'images'], function (/* cb */) {
     return nodemonServerInit();
 });
 
@@ -38,7 +41,7 @@ gulp.task('css', function () {
         cssnano()
     ];
 
-    return gulp.src('assets/css/*.css')
+    return gulp.src('src/css/*.css')
         .on('error', swallowError)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
@@ -48,7 +51,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['css']);
+    gulp.watch('src/css/**', ['css']);
 });
 
 gulp.task('zip', ['css'], function() {
@@ -68,3 +71,35 @@ gulp.task('zip', ['css'], function() {
 gulp.task('default', ['build'], function () {
     gulp.start('watch');
 });
+
+/*
+gulp.task('images', function(cb) {
+    gulp.src(['src/** /*.png','src/** /*.jpg','src/** /*.gif','src/** /*.jpeg']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('assets/images')).on('end', cb).on('error', cb);
+});*/
+
+const imagemin = require('gulp-imagemin');
+ 
+
+gulp.task('images', () =>
+    {
+    gulp.src('src/images/**/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ], {
+            verbose: true
+        }))
+        .pipe(gulp.dest('assets/images'));
+    }
+);
