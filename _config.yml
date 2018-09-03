@@ -11,7 +11,7 @@ baseurl: /
 title: ImagineCode
 description: ImagineCode 2018
 cover: assets/images/blog-cover.jpg
-logo: assets/images/logo.png
+logo: assets/images/logo.svg
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.ico
 production_url: https://jekyller.github.io/jasper2/

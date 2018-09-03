@@ -1,4 +1,10 @@
-Redirect 301 /inscripcion https://docs.google.com/forms/d/e/1FAIpQLSeKE2SOQSEeA5CbXs7ebmR0MASN_Im4_H7DUajYQ0BrarZlDg/viewform
+Options +FollowSymLinks
+RewriteEngine On
+
+Redirect /inscripcion https://docs.google.com/forms/d/e/1FAIpQLSeKE2SOQSEeA5CbXs7ebmR0MASN_Im4_H7DUajYQ0BrarZlDg/viewform
+RewriteRule "/politicaprivacidad" "/politicaprivacidad.html" [R]
+RewriteRule "/politicaprivacidad/" "/politicaprivacidad.html"
+
 
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html

@@ -816,3 +816,27 @@ opacity: .2;
 .slick-current {
 opacity: 1;
 }
+
+h3.subsection_title{
+  font-size: 1.85rem;
+}
+
+.inscription-btn {
+  background-color: #1177ba;
+  color: #FBFBFB;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+@media(min-width: 500px){
+  .visible-mobile{
+    display: none;
+  }
+}
+
+@media(max-width: 500px){
+  .visible-mobile{
+    display: none;
+  }
+}
