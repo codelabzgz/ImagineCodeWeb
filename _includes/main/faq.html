@@ -1,19 +1,19 @@
-<article class="post-card home-template no-image flex-item-full-flow" id="faq">
-    <div class="post-card-content">
-        <a class="post-card-content-link">
-            <header class="post-card-header">
-                <h2 class="post-card-title">FAQ</h2>
-            </header>
-            <section class="post-card-excerpt">
-                <div class="flex-container faq-container">
-                    {% for faq in page.faqs %}
-                    <div class="flex-item faq-item">
-                        <h3>{{ faq.title }}</h3>
-                        <p>{{ faq.body }}</p>
+<div class="card container shadow mb-5">
+    <div class="container card shadow">
+        <div class="card-body">
+            <h2 class="card-title mb-4">FAQ</h2>
+            {% assign rows = page.faqs.size | divided_by: 3.0 | ceil %}
+            {% for i in (1..rows) %}
+                
+                <div class="card-deck mb-4">
+                    {% for faq in page.faqs limit:3 offset:offset %}
+                    <div class="card-body shadow">
+                        <h3 class="card-title">{{ faq.title }}</h3>
+                        <p class="card-text">{{ faq.body }}</p>
                     </div>
                     {% endfor %}
                 </div>
-            </section>
-        </a>
+            {% endfor %}
+        </div>
     </div>
-</article>
+</div>
