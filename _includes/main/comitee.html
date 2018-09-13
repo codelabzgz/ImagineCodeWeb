@@ -1,19 +1,13 @@
-<article class="post-card home-template no-image flex-item-full-flow" id="comitee">
-    <div class="post-card-content">
-        <a class="post-card-content-link">
-            <header class="post-card-header">
-                <h2 class="post-card-title">Organización</h2>
-            </header>
-        </a>
-        <section class="post-card-excerpt">
+<div class="container mb-5">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title mb-4">Organización</h2>
             <div class="flex-container flex-center">
                 {% for person in page.comitee %}
                 {% if person.photo%}
                 <div class="person">
                     <img class="photo" width="5%" data-defer-src="{{ site.baseurl }}{{ person.photo }}" alt="{{person.name}}"/>
                     <div class="social-network">
-                        <em>{{ person.name }}</em>
-                        <br />
                         {% if person.twitter %}
                         <a class="twitter" href="http://twitter.com/{{person.twitter}}" target="blank">
                             <i class="fab fa-twitter fa-2x"></i>
@@ -29,11 +23,13 @@
                             <i class="fab fa-github fa-2x"></i>
                         </a>
                         {% endif %}
+                        <br />
+                        <h5>{{ person.name }}</h5>
                     </div>
                 </div>
                 {% endif %}
                 {% endfor %}
             </div>
-        </section>
+        </div>
     </div>
-</article>
+</div>

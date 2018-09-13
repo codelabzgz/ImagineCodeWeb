@@ -1,45 +1,14 @@
-<style>
-    .slider {
-        width: 50%;
-        margin: 100px auto;
-    }
-
-    .slider > .slick-slide {
-        vertical-align: middle;
-    }
-</style>
-
-<article class="post-card home-template no-image flex-item-full-flow" id="sponsors">
-    <div class="post-card-content">
-        <a class="post-card-content-link">
-            <header class="post-card-header">
-                <h2 class="post-card-title">Patrocinadores</h2>
-            </header>
-            <section class="post-card-excerpt">
-                    <div class="" style="background-color: white;">
-                            <section class="regular slider">
-                                <div style="line-height: 200px; width: 20%;">
-                                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/unizar.png">
-                                </div>
-                                <div style="line-height: 200px; width: 20%;">
-                                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/eina.png">
-                                </div>
-                                <div style="line-height: 200px; width: 20%;">
-                                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/inycom.png">
-                                </div>
-                                <div style="line-height: 200px; width: 20%;">
-                                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/everis.png">
-                                </div>
-                                <div style="line-height: 200px; width: 20%;">
-                                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/keensoft.png">
-                                </div>
-                                <div style="line-height: 200px; width: 20%;">
-                                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/codelab.png">
-                                </div>
-                            </section>
-                        </div>
-                        <p></p>      
+<div class="container mb-5">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title mb-4">Patrocinadores</h2>
+            <section class="regular slider">
+                {% for sponsor in page.sponsors %}
+                <div style="line-height: 200px; width: 20%;">
+                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor}}">
+                </div>
+                {% endfor %}
             </section>
-        </a>
+        </div>
     </div>
-</article>
+</div>

@@ -41,7 +41,7 @@ gulp.task('css', function () {
         cssnano()
     ];
 
-    return gulp.src('src/css/*.css')
+    return gulp.src('src/css/**/*.css')
         .on('error', swallowError)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))

@@ -21,6 +21,7 @@ div.countdown-content {
 .countdown-main {
     background: url(/assets/images/sky.jpg);
     background-size: 100% 100%;
+    height: 100%;
     opacity: 0.9;
 }
 
@@ -115,7 +116,7 @@ p {
 .person {
     flex: 0 1 auto;
     margin: 5%;
-    min-width: 150px;
+    min-width: 100px;
     width: 5%;
 }
 
@@ -836,7 +837,20 @@ h3.subsection_title{
 }
 
 @media(max-width: 500px){
-  .visible-mobile{
+  .visible-desktop{
     display: none;
   }
+}
+
+.slider {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.slider > .slick-slide {
+  vertical-align: middle;
+}
+
+.location-row{
+  min-height: 300px;
 }
