@@ -86,7 +86,7 @@ const imagemin = require('gulp-imagemin');
 
 gulp.task('images', () =>
     {
-    gulp.src('src/images/**/*')
+    gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.png'])
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
@@ -100,6 +100,8 @@ gulp.task('images', () =>
         ], {
             verbose: true
         }))
+        .pipe(gulp.dest('assets/images'));
+    gulp.src(['src/images/**/*.ico'])
         .pipe(gulp.dest('assets/images'));
     }
 );

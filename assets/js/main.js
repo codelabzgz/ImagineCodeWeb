@@ -5,15 +5,16 @@ $("a[href^='#']").on('click', function(e) {
  
     // store hash
     var hash = this.hash;
+    var offsetTop = 115;
  
     // animate
     $('html, body').animate({
-        scrollTop: $(hash).offset().top
+        scrollTop: $(hash).offset().top - offsetTop
       }, 300, function(){
  
         // when done, add hash to url
         // (default click behaviour)
-        window.location.hash = hash;
+        //window.location.hash = hash;
       });
  
  });

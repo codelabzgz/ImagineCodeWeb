@@ -73,38 +73,36 @@ faqs:
  - title: '¿Qu&eacute; debo llevar al evento?'
    body: 'B&aacute;sicamente, un ordenador y un documento que te identifique. A partir de ah&iacute; 
         lo que quieras y necesites. '
+schedule_hours:
+  - '00'
+  - '01'
+  - '02'
+  - '03'
+  - '04'
+  - '05'
+  - '06'
+  - '07'
+  - '08'
+  - '09'
+  - '10'
+  - '11'
+  - '12'
+  - '13'
+  - '14'
+  - '15'
+  - '16'
+  - '17'
+  - '18'
+  - '19'
+  - '20'
+  - '21'
+  - '22'
+  - '23'
 ---
 
-<!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
-
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                {% if site.logo %}
-                    <div class="site-logo-back">
-                        <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
-                    </div>
-                {% else %}
-                    {{ site.title }}
-                {% endif %}
-            </h1>
-            
-        </div>
-        {% include site-nav.html %}
-    </div>
-</header>
+{% include navigation.html %}
 
 <!-- The main content area -->
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
-        <div class="post-feed">
-            {% include main.html %}
-        </div>
-        
-    </div>
-    
+<main id="site-main" class="site-main outer ic-main-container">
+  {% include main.html %}
 </main>

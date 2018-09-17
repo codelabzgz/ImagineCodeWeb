@@ -1,8 +1,42 @@
-<ul class="nav" role="menu">
-    <li class="nav-option" role="menuitem"><a href="#inscription">Inscripci&oacute;n</a></li>
-    <li class="nav-option" role="menuitem"><a href="#about">About</a></li>
-    <li class="nav-option" role="menuitem"><a href="#sponsors">Patrocinadores</a></li>
-    <li class="nav-option" role="menuitem"><a href="#faq">FAQ</a></li>
-    <li class="nav-option" role="menuitem"><a href="#comitee">Organizadores</a></li>
-    <li class="nav-option" role="menuitem"><a href="#location">Lugar</a></li>
-</ul>
+<nav id="ic-navbar" class="navbar navbar-expand-lg fixed-top">
+    <div id="collapse1" class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+        <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#inscription">Inscripci&oacute;n</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#challenges">Retos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sponsors">Patrocinadores</a>
+            </li>
+        </ul>
+    </div>
+    <div align="center" class="mx-auto my-2 order-0 order-md-1 position-relative">
+        <a class="mx-auto">
+            <img class="ic-logo" src="{{ site.baseurl}}{{ site.logo }}" alt="{{ site.title }}" width="140px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+    </div>
+    <div id="collapse2" class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+        <ul class="navbar-nav mr-auto text-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#schedule">Horario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#comitee">Organizadores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#location">Lugar</a>
+            </li>
+        </ul>
+    </div>
+</nav>

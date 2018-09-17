@@ -1,21 +1,22 @@
-<div class="container mb-5">
+<div id="faq" class="container mb-5">
     <div class="card shadow-sm">
         <div class="card-body">
-            <h2 class="card-title mb-4">FAQ</h2>
-            {% assign rows = page.faqs.size | divided_by: 3.0 | ceil %}
-            {% for i in (1..rows) %}
-                
-                <div class="card-deck mb-4">
+            <h1 class="card-title mb-4 font-weight-bold">FAQ</h1>
+            <div class="container">
+                <div class="row">
+            {% assign rows = page.faqs.size | divided_by: 3.0 | floor %}
+            {% for i in (0..rows) %}
+                {% assign offset = i | times: 3.0 %}
                     {% for faq in page.faqs limit:3 offset:offset %}
-                    <div class="card">
+                    <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card-body shadow">
-                            <h3 class="card-title">{{ faq.title }}</h3>
-                            <p class="card-text">{{ faq.body }}</p>
+                            <h2 class="card-title font-weight-bold">{{ faq.title }}</h2>
+                            <h4 class="card-text">{{ faq.body }}</h4>
                         </div>
                     </div>
                     {% endfor %}
-                </div>
             {% endfor %}
+        </div></div>
         </div>
     </div>
 </div>

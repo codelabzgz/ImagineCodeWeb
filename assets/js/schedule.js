@@ -13,7 +13,8 @@ jQuery(document).ready(function($){
 		this.timelineItemsNumber = this.timelineItems.length;
 		this.timelineStart = getScheduleTimestamp(this.timelineItems.eq(0).text());
 		//need to store delta (in our case half hour) timestamp
-		this.timelineUnitDuration = getScheduleTimestamp(this.timelineItems.eq(1).text()) - getScheduleTimestamp(this.timelineItems.eq(0).text());
+		//this.timelineUnitDuration = getScheduleTimestamp(this.timelineItems.eq(1).text()) - getScheduleTimestamp(this.timelineItems.eq(0).text());
+		this.timelineUnitDuration = getScheduleTimestamp(this.timeline.data("timeline-delta"));
 
 		this.eventsWrapper = this.element.find('.events');
 		this.eventsGroup = this.eventsWrapper.find('.events-group');
@@ -72,7 +73,7 @@ jQuery(document).ready(function($){
 			//detect click on the event and open the modal
 			$(this).on('click', 'a', function(event){
 				event.preventDefault();
-				if( !self.animating ) self.openModal($(this));
+				//if( !self.animating ) self.openModal($(this));
 			});
 		});
 

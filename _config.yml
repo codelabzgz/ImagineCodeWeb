@@ -71,7 +71,7 @@ username: jekyller
 repo: jasper2
 branch: master
 relative_source: ../jasper2/
-destination: ../web-built/
+destination: ./build/
 production_url:  https://jekyller.github.io/jasper2/
 source_url:  https://github.com/jekyller/jasper2/
 
