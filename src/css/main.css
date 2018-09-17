@@ -1112,3 +1112,20 @@ h3.subsection_title{
 .site-footer a {
   color: 96a6bb;
 }
+
+.challenge-description {
+  display: none;
+}
+
+#challenges .challenge-img {
+  width: 100%;
+  max-width: 500px;
+}
+
+#challenges .unknown-challenge {
+  background-color: #B2B2B2;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  font-size: 7em;
+}
