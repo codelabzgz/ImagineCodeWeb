@@ -1,14 +1,26 @@
 <div id="sponsors" class="container mb-5">
     <div class="card shadow-sm">
         <div class="card-body">
-            <h1 class="card-title mb-4 font-weight-bold">Patrocinadores</h1>
-            <section class="regular slider">
-                {% for sponsor in page.sponsors %}
-                <div style="line-height: 200px; width: 20%;">
-                    <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor}}">
-                </div>
-                {% endfor %}
-            </section>
+            <div>
+                <h1 class="card-title mb-3 font-weight-bold">Patrocinadores</h1>
+                <section class="regular slider">
+                    {% for sponsor in page.sponsors %}
+                    <div style="line-height: 200px; width: 20%;">
+                        <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor}}">
+                    </div>
+                    {% endfor %}
+                </section>
+            </div>
+            <div>
+                <h1 class="card-title mb-3 mt-5 font-weight-bold">Colaboradores</h1>
+                <section class="regular slider">
+                    {% for sponsor in page.sponsors2 %}
+                    <div style="line-height: 200px; width: 20%;">
+                        <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor}}">
+                    </div>
+                    {% endfor %}
+                </section>
+            </div>
         </div>
     </div>
 </div>
