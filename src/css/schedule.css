@@ -343,6 +343,15 @@ Main Components
     background: #0b7792;
   }
 
+  .cd-schedule .single-event[data-event="event-tournament"],
+  .cd-schedule [data-event="event-tournament"] .header-bg {
+    background: #9e811f;
+  }
+  
+  .cd-schedule .single-event[data-event="event-tournament"]:hover {
+    background: #dab12e;
+  }
+
   .cd-schedule .single-event[data-event="event-generic"],
   .cd-schedule [data-event="event-generic"] .header-bg {
     background: #290235;
