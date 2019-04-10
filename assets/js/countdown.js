@@ -14,6 +14,10 @@ function tick(){
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  if(distance < 0){
+    days = hours = minutes = seconds = 0;
+  }
+
   // Display the result in the element with id="countdown-content"
   document.getElementById("dias").innerHTML = days;
   document.getElementById("horas").innerHTML = hours;
