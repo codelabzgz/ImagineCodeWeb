@@ -24,12 +24,10 @@ function tick(){
   document.getElementById("min").innerHTML = minutes;
   document.getElementById("seg").innerHTML = seconds;
 
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown-container").innerHTML = "¡Esto ha comenzado!";
-  }
+  if(days == 1) $("span.day_plural").hide(); else $("span.day_plural").show();
+  if(hours == 1) $("span.hour_plural").hide(); else $("span.hour_plural").show();
+  if(minutes == 1) $("span.minute_plural").hide(); else $("span.minute_plural").show();
+  if(seconds == 1) $("span.second_plural").hide(); else $("span.second_plural").show();
 }
 
 tick();
