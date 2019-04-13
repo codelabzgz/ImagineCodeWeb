@@ -4,7 +4,7 @@
             <h1 class="card-title mb-4 font-weight-bold">Organizadores</h1>
             <div class="flex-container flex-center">
                 {% for person in page.comitee %}
-                {% if person.photo%}
+                {% if person.photo and person.hide != true %}
                 <div class="person">
                     <img class="photo" width="5%" data-defer-src="{{ site.baseurl }}{{ person.photo }}" alt="{{person.name}}"/>
                     <div class="social-network">
