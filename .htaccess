@@ -1,9 +1,12 @@
-Options +FollowSymLinks
+Options +FollowSymLinks -MultiViews -Indexes
+
+DirectoryIndex index.html
+
 RewriteEngine On
+RewriteBase /
 
 Redirect /inscripcion https://docs.google.com/forms/d/e/1FAIpQLSeKE2SOQSEeA5CbXs7ebmR0MASN_Im4_H7DUajYQ0BrarZlDg/viewform
-RewriteRule "/politicaprivacidad" "/politicaprivacidad.html" [R]
-RewriteRule "/politicaprivacidad/" "/politicaprivacidad.html"
+RewriteRule "^politicaprivacidad/?$" "/politicaprivacidad.html"
 
 
 AddOutputFilterByType DEFLATE text/plain

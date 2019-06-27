@@ -9,8 +9,8 @@ baseurl: /
 
 # Website info
 title: ImagineCode
-description: ImagineCode 2018
-cover: assets/images/blog-cover.jpg
+description: ImagineCode 2019
+cover: assets/images/logo.png
 logo: assets/images/logo.svg
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.ico
