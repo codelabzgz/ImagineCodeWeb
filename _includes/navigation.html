@@ -1,18 +1,21 @@
+{% assign parsed_sections = page.sections | where: "show_nav", true | sort: "order" %}
+{% assign end_left_nav = parsed_sections | size | divided_by: 2 | minus: 1 %}
+{% assign start_right_nav = end_left_nav | plus: 1 %}
+{% assign section_count = parsed_sections | size %}
+
+{{split_index}}
+
 <nav id="ic-navbar" class="navbar navbar-expand-lg fixed-top">
     <div id="collapse1" class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
         <ul class="navbar-nav ml-auto text-center">
-            <li class="nav-item">
-                <a class="nav-link" href="#inscription">Inscripci&oacute;n</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#challenges">Retos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sponsors">Patrocinadores</a>
-            </li>
+            {% for i in (0..end_left_nav) %}
+                {% assign section = parsed_sections[i] %}
+                {% if section.text and section.show == true %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{section.link}}">{{section.text}}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </div>
     <div align="center" class="mx-auto my-2 order-0 order-md-1 position-relative">
@@ -25,18 +28,14 @@
     </div>
     <div id="collapse2" class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
         <ul class="navbar-nav mr-auto text-center">
-            <li class="nav-item">
-                <a class="nav-link" href="#schedule">Horario</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#faq">FAQ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#comitee">Organizadores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#location">Lugar</a>
-            </li>
+            {% for i in (start_right_nav..section_count) %}
+                {% assign section = parsed_sections[i] %}
+                {% if section.text and section.show == true %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{section.link}}">{{section.text}}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </div>
 </nav>

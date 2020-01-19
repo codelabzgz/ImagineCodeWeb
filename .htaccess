@@ -5,7 +5,7 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
-Redirect /inscripcion https://docs.google.com/forms/d/e/1FAIpQLSeKE2SOQSEeA5CbXs7ebmR0MASN_Im4_H7DUajYQ0BrarZlDg/viewform
+Redirect /inscripcion https://docs.google.com/forms/d/e/1FAIpQLSfQksl2b4piOthCpLH3R1baGF53rVSyzNWIUTVGaDpKB4iEVQ/viewform
 RewriteRule "^politicaprivacidad/?$" "/politicaprivacidad.html"
 
 

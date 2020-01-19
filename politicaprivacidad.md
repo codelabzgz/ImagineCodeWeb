@@ -13,14 +13,14 @@ La asociación CodeLab recopila, trata y almacena información personal a travé
 
 Esta información será relativa a los usuarios de la web y los participantes en eventos organizados por la asociación CodeLab como, por ejemplo, el hackathon ImagineCode. La información se recopilará, tratara y almacenará conforme a la presente Política de Privacidad.
 
-Esta Política de Privacidad fue actualizada el 28/08/2018.
+Esta Política de Privacidad fue actualizada el 17/01/2020.
 
 ### Responsable legal
 
 - Denominación social: CodeLab
 - Identificador fiscal: G99528358
 - Domicilio: Calle María de Luna 3, Edificio Torres Quevedo
-- E-mail de contacto: ic@imaginecode.org
+- E-mail de contacto: codelab@unizar.es
 - Leyes de aplicación en esta web:
 
     - RGPD (Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas)
@@ -37,15 +37,14 @@ En todo caso estos datos serán de carácter personal identificativos y no sensi
 
 - Correo electrónico
 - Nombre y apellidos
-- Nombre del aquipo
+- Nombre del equipo
 - Alergias y enfermedades alimentacias
 - Talla de camiseta
-- Temáticas de interés
 - Redes Sociales (Twitter, LinkedIn, Github)
 
 ### Métodos de recopilación.
 
-Los datos personales se recopilarán a través de la web [https://imaginecode.org/](https://imaginecode.org/), cuando introduzcas información en alguno de los campos destinados a tal efecto en la web. Estos campos están debidamente señalizados y no recopilarán ningún dato hasta que no aceptes expresamente la cesión y gestión conforme a esta política de privacidad.
+Los datos personales se recopilarán a través de la web [https://imaginecode.org/](https://imaginecode.org/) o en los formularios de Google que esta página enlaza, cuando introduzcas información en alguno de los campos destinados a tal efecto en la web. Estos campos están debidamente señalizados y no recopilarán ningún dato hasta que no aceptes expresamente la cesión y gestión conforme a esta política de privacidad.
 
 ### Objetivo de la recopilación y uso de los datos.
 

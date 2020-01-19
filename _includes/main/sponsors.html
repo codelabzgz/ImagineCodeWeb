@@ -1,6 +1,7 @@
 <div id="sponsors" class="container mb-5">
     <div class="card shadow-sm">
         <div class="card-body">
+            {% if page.sponsors %}
             <div>
                 <h1 class="card-title mb-3 font-weight-bold">Patrocinadores</h1>
                 <section class="regular slider">
@@ -11,6 +12,7 @@
                     {% endfor %}
                 </section>
             </div>
+            {% endif %}
             <div>
                 <h1 class="card-title mb-3 mt-5 font-weight-bold">Colaboradores</h1>
                 <section class="regular slider">

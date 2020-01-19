@@ -1,8 +1,10 @@
 <div>
-    {% include main/countdown.html %}
-    {% include main/about.html %}
-    {% include main/sponsors.html %}
-    {% include main/faq.html %}
-    {% include main/comitee.html %}
-    {% include main/location.html %}
+    {% assign sections = page.sections | sort: "order" %}
+
+    {% for section in sections %}
+        {% if section.show == true %}
+            {% assign section_page = "main/" | append: section.name | append: ".html" %}
+            {% include {{section_page}} %}
+        {% endif %}
+    {% endfor %}
 </div>
