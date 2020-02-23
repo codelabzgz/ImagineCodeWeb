@@ -8,6 +8,9 @@ var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var zip = require('gulp-zip');
 
+//JS minify
+const js_minify = require('gulp-minify');
+
 // postcss plugins
 var autoprefixer = require('autoprefixer');
 var colorFunction = require('postcss-color-function');
@@ -67,20 +70,25 @@ gulp.task('css', function () {
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/built/'))
+        .pipe(gulp.dest('assets/css/'))
         .pipe(livereload());
 });
 
+gulp.task('js', function () {
+    return gulp.src(['src/js/**/*.js'])
+        .pipe(js_minify())
+        .pipe(gulp.dest('assets/js/'))
+});
 
-gulp.task('build', gulp.series('css', gulp.series('images', function (/* cb */) {
+gulp.task('build', gulp.series('js', gulp.series('css', gulp.series('images', function (/* cb */) {
     return nodemonServerInit();
-})));
+}))));
 
 gulp.task('watch', function () {
     gulp.watch('src/css/**', ['css']);
 });
 
-gulp.task('zip', gulp.series('css', function() {
+gulp.task('zip', gulp.series('build', function() {
     var targetDir = 'dist/';
     var themeName = require('./package.json').name;
     var filename = themeName + '.zip';
