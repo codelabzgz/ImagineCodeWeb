@@ -28,9 +28,30 @@ var nodemonServerInit = function () {
     livereload.listen(1234);
 };
 
-gulp.task('build', ['css', 'images'], function (/* cb */) {
-    return nodemonServerInit();
-});
+const imagemin = require('gulp-imagemin');
+ 
+
+gulp.task('images', async () =>
+    {
+    gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.png'])
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ], {
+            verbose: true
+        }))
+        .pipe(gulp.dest('assets/images'));
+    gulp.src(['src/images/**/*.ico'])
+        .pipe(gulp.dest('assets/images'));
+    }
+);
 
 gulp.task('css', function () {
     var processors = [
@@ -50,11 +71,16 @@ gulp.task('css', function () {
         .pipe(livereload());
 });
 
+
+gulp.task('build', gulp.series('css', gulp.series('images', function (/* cb */) {
+    return nodemonServerInit();
+})));
+
 gulp.task('watch', function () {
     gulp.watch('src/css/**', ['css']);
 });
 
-gulp.task('zip', ['css'], function() {
+gulp.task('zip', gulp.series('css', function() {
     var targetDir = 'dist/';
     var themeName = require('./package.json').name;
     var filename = themeName + '.zip';
@@ -66,11 +92,11 @@ gulp.task('zip', ['css'], function() {
     ])
         .pipe(zip(filename))
         .pipe(gulp.dest(targetDir));
-});
+}));
 
-gulp.task('default', ['build'], function () {
+gulp.task('default', gulp.series('build', function () {
     gulp.start('watch');
-});
+}));
 
 /*
 gulp.task('images', function(cb) {
@@ -80,28 +106,3 @@ gulp.task('images', function(cb) {
         interlaced: true
     })).pipe(gulp.dest('assets/images')).on('end', cb).on('error', cb);
 });*/
-
-const imagemin = require('gulp-imagemin');
- 
-
-gulp.task('images', () =>
-    {
-    gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.png'])
-        .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.jpegtran({progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
-            imagemin.svgo({
-                plugins: [
-                    {removeViewBox: true},
-                    {cleanupIDs: false}
-                ]
-            })
-        ], {
-            verbose: true
-        }))
-        .pipe(gulp.dest('assets/images'));
-    gulp.src(['src/images/**/*.ico'])
-        .pipe(gulp.dest('assets/images'));
-    }
-);
