@@ -5,7 +5,7 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
-Redirect /inscripcion https://docs.google.com/forms/d/e/1FAIpQLSfQksl2b4piOthCpLH3R1baGF53rVSyzNWIUTVGaDpKB4iEVQ/viewform
+Redirect /inscripcion https://www.eventbrite.es/e/entradas-imaginecode-2020-91163272803
 RewriteRule "^politicaprivacidad/?$" "/politicaprivacidad.html"
 
 
