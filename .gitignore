@@ -6,3 +6,5 @@ package-lock.json
 node_modules/
 .DS_Store
 build/
+assets/images
+assets/js
