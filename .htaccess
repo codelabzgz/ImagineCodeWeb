@@ -5,7 +5,7 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
-Redirect /inscripcion https://www.eventbrite.es/e/entradas-imaginecode-2020-91163272803
+Redirect /inscripcion https://imaginecode.eventbrite.com/
 RewriteRule "^politicaprivacidad/?$" "/politicaprivacidad.html"
 
 

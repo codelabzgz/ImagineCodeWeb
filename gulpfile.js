@@ -1,5 +1,17 @@
 var gulp = require('gulp');
 
+const AUTOPREFIXER_BROWSERS = [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
+  ];
+
 // gulp plugins and utils
 var gutil = require('gulp-util');
 var livereload = require('gulp-livereload');
@@ -7,6 +19,8 @@ var nodemon = require('gulp-nodemon');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var zip = require('gulp-zip');
+var gzip = require('gulp-gzip');
+
 
 //JS minify
 const js_minify = require('gulp-minify');
@@ -17,6 +31,7 @@ var colorFunction = require('postcss-color-function');
 var cssnano = require('cssnano');
 var customProperties = require('postcss-custom-properties');
 var easyimport = require('postcss-easy-import');
+
 
 // img plugins
 var imageop = require('gulp-image-optimization');
@@ -61,7 +76,7 @@ gulp.task('css', function () {
         easyimport,
         customProperties,
         colorFunction(),
-        autoprefixer({browsers: ['last 2 versions']}),
+        autoprefixer({browsers: AUTOPREFIXER_BROWSERS}),
         cssnano()
     ];
 
@@ -70,8 +85,8 @@ gulp.task('css', function () {
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/css/'))
-        .pipe(livereload());
+        .pipe(gzip())
+        .pipe(gulp.dest('assets/css/'));
 });
 
 gulp.task('js', function () {
@@ -80,9 +95,13 @@ gulp.task('js', function () {
         .pipe(gulp.dest('assets/js/'))
 });
 
-gulp.task('build', gulp.series('js', gulp.series('css', gulp.series('images', function (/* cb */) {
+gulp.task('slick', function () {
+   return gulp.src(['src/css/slick/**/*']).pipe(gulp.dest('assets/css/slick/'))
+});
+
+gulp.task('build', gulp.series('js', gulp.series('css', gulp.series('slick', gulp.series('images', function (/* cb */) {
     return nodemonServerInit();
-}))));
+})))));
 
 gulp.task('watch', function () {
     gulp.watch('src/css/**', ['css']);

@@ -7,7 +7,7 @@
                 <section class="regular slider">
                     {% for sponsor in page.platinum %}
                     <div style="line-height: 200px; width: 20%;">
-                        <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor}}">
+                        <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor.logo}}" alt="{{sponsor.alt}}">
                     </div>
                     {% endfor %}
                 </section>
@@ -18,7 +18,7 @@
                 <section class="regular slider">
                     {% for sponsor in page.sponsors2 %}
                     <div style="line-height: 200px; width: 20%;">
-                        <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor}}">
+                        <img style="vertical-align: middle;" width="200" data-defer-src="{{ site.baseurl }}assets/images/sponsors/{{sponsor.logo}}" alt="{{sponsor.alt}}">
                     </div>
                     {% endfor %}
                 </section>

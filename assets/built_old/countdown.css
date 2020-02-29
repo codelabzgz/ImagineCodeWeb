@@ -1,0 +1,79 @@
+/* MOVE TO main.css ASAP */
+
+div.countdown-content {
+    color: rgba(127, 127, 127, 0.75);
+    background-color: rgba(200, 10, 10, 0.5) !important;
+    font-size: 4rem;
+}
+
+#countdown-content {
+    color: rgba(127, 127, 127, 0.75);
+    background-color: rgba(200, 10, 10, 0.5) !important;
+    font-size: 4rem;
+}
+
+.countdown-main {
+    background: url(/assets/images/sky.jpg);
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+
+.flex-center {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.center-div
+{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+
+@media(min-width: 850px){
+    .countdown-container {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+}
+    
+@media(max-width: 850px){
+    .countdown-container {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5px;
+        padding: 5px;
+    }
+}
+
+.countdown-container > div {
+    text-align: center;
+    font-size: 30px;
+}
+
+.countdown-item {
+    color: white;
+    border: 3px solid white;
+}
+
+.countdown-item h3{
+    margin-top: 20px;
+}
+
+.tiempo {
+    margin-top: 15px;
+}
+

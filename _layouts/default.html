@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 
     <!-- Document Settings -->
@@ -10,8 +10,6 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
-    <!--<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />-->
     <!-- highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
@@ -77,28 +75,22 @@
     {% endif %}
 
     <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <!--<script async src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
     <script>$(document).ready(function() {
       $('pre code').each(function(i, block) {
         hljs.highlightBlock(block);
       });
-    });</script>
+    });</script>-->
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+    <!--<script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>-->
 
 
     {% if paginator.total_pages > site.paginate %}
     <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script>
+    <script async src="{{ site.baseurl }}assets/js/infinitescroll.js"></script>
     {% endif %}
 
 
@@ -106,22 +98,18 @@
     {% include analytics.html %}
     
     
-    <script defer src="{{ site.baseurl }}assets/js/fontawesome-all.min.js"></script>
+    <script src="{{ site.baseurl }}assets/js/fontawesome-all.min.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="{{ site.baseurl }}assets/slick/slick.min.js"></script>
-    <script src="{{ site.baseurl }}assets/js/main.js"></script>
-    <script src="{{ site.baseurl }}assets/js/sponsors.js"></script>
-    <script src="{{ site.baseurl }}assets/js/countdown.js"></script>
-    <script src="{{ site.baseurl }}assets/js/schedule.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="{{ site.baseurl }}assets/js/slick/slick{{site.js_modifier}}.js"></script>
+    <script src="{{ site.baseurl }}assets/js/main{{site.js_modifier}}.js"></script>
+    <script src="{{ site.baseurl }}assets/js/sponsors{{site.js_modifier}}.js"></script>
+    <script src="{{ site.baseurl }}assets/js/countdown{{site.js_modifier}}.js"></script>
 
-
-    <script>
-            writeMailLink("mail-top");
-    
-            writeMail("mail-bottom-container");
-            writeMailLink("mail-bottom");
-        </script>
+    {% assign schedule_section = page.sections | where: "name", "schedule" | first %}
+    {% if schedule_section.show == true %}
+    <script src="{{ site.baseurl }}assets/js/schedule{{js_modifier}}.js"></script>
+    {% endif %}
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
     {% if page.class == "post-template" %}

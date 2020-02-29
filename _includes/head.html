@@ -68,25 +68,24 @@
     <meta name="generator" content="Jekyll 3.6.2" />
     <link rel="alternate" type="application/rss+xml" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" href="{{ site.baseurl }}feed.xml" />
 
-    <link href="{{ site.baseurl }}assets/built/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/{{site.bootstrap_version}}/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="{{ site.baseurl }}assets/slick/slick.css" rel="stylesheet" />
-    <link href="{{ site.baseurl }}assets/slick/slick-theme.css" rel="stylesheet" />
-    <link href="{{ site.baseurl }}assets/built/schedule.css" rel="stylesheet" />
+    <link rel="preload" href="{{ site.baseurl }}assets/css/slick/fonts/slick.woff" as="font" />
+    <link href="{{ site.baseurl }}assets/css/slick/slick{{site.css_modifier}}.css{{site.compression}}" rel="stylesheet" />
+    <link href="{{ site.baseurl }}assets/css/slick/slick-theme{{site.css_modifier}}.css{{site.compression}}" rel="stylesheet" />
     
 
 
-    <link rel="stylesheet" href="{{ site.baseurl }}assets/built/main.css" type = "text/css">
-    <link rel="stylesheet" href="{{ site.baseurl }}assets/built/schedule.css" type = "text/css">
-    <link rel="stylesheet" href="{{ site.baseurl }}assets/built/jquery.flipcountdown.css" type = "text/css">    
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/main.css" type = "text/css">
+    {% assign schedule_section = page.sections | where: "name", "schedule" | first %}
+    {% if schedule_section.show == true %}
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/schedule.css" type = "text/css">
+    {% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/jquery.flipcountdown.css" type = "text/css">    
 
-    <!--<script type="text/javascript" src="/jquery.min.js"></script>--
-    <script type="text/javascript" src="/jquery.flipcountdown.js"></script>
-    <!-<link rel="stylesheet" type="text/css" href="/jquery.flipcountdown.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{site.jquery_version}}/jquery.min.js"></script>
 
-    <script src="assets/js/countdown.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="{{ site.baseurl }}assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/{{site.bootstrap_version}}/js/bootstrap.bundle.min.js"></script>
 
     
 

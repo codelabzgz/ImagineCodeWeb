@@ -16,11 +16,11 @@
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+<link rel="stylesheet" href="https://unpkg.com/leaflet@{{site.leaflet_version}}/dist/leaflet.css"
+    integrity="{{site.leaflet_css_integrity_key}}"
     crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    <script src="https://unpkg.com/leaflet@{{site.leaflet_version}}/dist/leaflet.js"
+    integrity="{{site.leaflet_js_integrity_key}}"
     crossorigin=""></script>
 <script>
 	var mymap = L.map('streetmap').setView([41.683559, -0.884723], 16);
