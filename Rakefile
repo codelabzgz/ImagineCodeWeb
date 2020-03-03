@@ -13,7 +13,6 @@ CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"]
 REPO = CONFIG["repo"]
 SOURCE_BRANCH = CONFIG["branch"]
-DESTINATION_BRANCH = "gh-pages"
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
@@ -54,25 +53,13 @@ namespace :site do
       sh "git config --global push.default simple"
     end
 
-    # Make sure destination folder exists as git repo
-    check_destination
-
-    sh "git checkout #{SOURCE_BRANCH}"
-    Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
-
     # Generate the site
     sh "bundle exec jekyll build"
 
-    # Commit and push to github
-    sha = `git log`.match(/[a-z0-9]{40}/)[0]
-    Dir.chdir(CONFIG["destination"]) do
-      # check if there is anything to add and commit, and pushes it
-      sh "if [ -n '$(git status)' ]; then
-            git add --all .;
-            git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.';
-            git push --quiet origin #{DESTINATION_BRANCH};
-         fi"
-      puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
+    if ENV["TRAVIS_BRANCH"] == "master"
+      puts 'Detected master branch'
+    elsif ENV["TRAVIS_BRANCH"] == "develop"
+      puts 'Detected develop branch'
     end
   end
 end
