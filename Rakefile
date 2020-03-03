@@ -8,11 +8,47 @@
 require 'rake'
 require 'date'
 require 'yaml'
+require 'net/ftp'
 
 CONFIG = YAML.load(File.read('_config.yml'))
 USERNAME = CONFIG["username"]
 REPO = CONFIG["repo"]
 SOURCE_BRANCH = CONFIG["branch"]
+COMPILED_DIR = CONFIG["destination"]
+DEPLOY_DIR = ENV["deploy_dir"]
+FTP_USER = ENV["ftp_user"]
+FTP_HOST = ENV["ftp_server"]
+FTP_PASS = ENV["ftp_pass"]
+
+def ftp_files(prefixToRemove, sourceFileList, targetDir, hostname, username, password)
+  Net::FTP.open(hostname, username, password) do |ftp|
+  begin
+    puts "Creating dir #{targetDir}" 
+    ftp.mkdir targetDir
+  rescue 
+    puts $!
+  end
+  sourceFileList.each do |srcFile|    
+    if prefixToRemove
+      targetFile = srcFile.pathmap(("%{^#{prefixToRemove},#{targetDir}}p")) 
+    else
+      targetFile = srcFile.pathmap("#{targetDir}%s%p")
+    end
+    begin
+      puts "Creating dir #{targetFile}" if File.directory?(srcFile)
+      ftp.mkdir targetFile if File.directory?(srcFile)
+    rescue 
+      puts $!
+    end
+    begin
+      puts "Copying #{srcFile} -> #{targetFile}" unless File.directory?(srcFile)
+      ftp.putbinaryfile(srcFile, targetFile) unless File.directory?(srcFile)
+    rescue 
+      puts $!
+    end
+  end
+  end
+end
 
 def check_destination
   unless Dir.exist? CONFIG["destination"]
@@ -59,7 +95,8 @@ namespace :site do
     if ENV["TRAVIS_BRANCH"] == "master"
       puts 'Detected master branch'
     elsif ENV["TRAVIS_BRANCH"] == "develop"
-      puts 'Detected develop branch'
+      puts 'Detected develop branch. Deploying to $deploy_dir'
+      ftp_files($COMPILED_DIR, FileList["$COMPILED_DIR/**/*"], $DEPLOY_DIR, $FTP_HOST, $FTP_USER, $FTP_PASS)
     end
   end
 end
