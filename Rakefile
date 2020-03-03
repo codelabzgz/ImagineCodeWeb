@@ -96,8 +96,8 @@ namespace :site do
     if ENV["TRAVIS_BRANCH"] == "master"
       puts 'Detected master branch'
     elsif ENV["TRAVIS_BRANCH"] == "develop"
-      puts 'Detected develop branch. Deploying to $deploy_dir'
-      ftp_files($COMPILED_DIR, FileList["$COMPILED_DIR/**/*"], $DEPLOY_DIR, $FTP_HOST, $FTP_USER, $FTP_PASS, $FTP_PORT)
+      puts "Detected develop branch. Deploying to #{DEPLOY_DIR}"
+      ftp_files(COMPILED_DIR, FileList["#{COMPILED_DIR}/**/*"], DEPLOY_DIR, FTP_HOST, FTP_USER, FTP_PASS, FTP_PORT)
     end
   end
 end
